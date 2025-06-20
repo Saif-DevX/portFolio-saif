@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
+  motion.div;
   return (
     <footer className="relative bg-black text-white py-12 px-6 overflow-hidden">
       {/* Background Glowing Blobs */}
