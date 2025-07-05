@@ -35,7 +35,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative overflow-hidden bg-black text-white lg:py-32 md:py-10 sm:py-15 py-10">
+    <section id="home" className="relative overflow-auto scroll-hidden bg-black text-white lg:py-32 md:py-10 sm:py-15 py-10">
 
       <MatrixCanvas />
 
@@ -52,7 +52,7 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="lg:w-1/2 text-center lg:text-left"
         >
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-4xl lg:text-[43px] font-extrabold mb-6 leading-tight">
             Hi, I’m
             <span className="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent select-none pl-3">
                Saif Ur Rehman

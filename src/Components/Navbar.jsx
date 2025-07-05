@@ -31,8 +31,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/70 dark:bg-black/60 backdrop-blur-md border-gray-300 dark:border-gray-700 shadow-lg">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+    <header className="fixed top-0 left-0 w-screen z-50 bg-white/70 dark:bg-black/60 backdrop-blur-md shadow-lg">
+      <div className="max-w-6xl mx-auto px-5 py-3 flex justify-between items-center">
 
         {/* Logo */}
         <motion.h1

@@ -1,4 +1,3 @@
-// src/components/Footer.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -16,7 +15,7 @@ const Footer = () => {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 max-w-6xl mx-auto text-center space-y-6"
+        className="relative z-10 mx-auto text-center space-y-6"
       >
         <h3 className="text-3xl font-bold text-indigo-400">Saif DevX</h3>
         <p className="text-gray-400 max-w-xl mx-auto">

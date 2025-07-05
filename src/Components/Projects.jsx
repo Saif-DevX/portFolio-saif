@@ -7,6 +7,7 @@ import EcomImg from "../assets/store.png"
 import BlogImg from "../assets/blog1.png"
 import WorldImg from "../assets/world.png"
 import SidcupImg from "../assets/sidcup.png"
+import WanderWiseImg from "../assets/WanderWiseImg.png"
 
 const projects = [
   {
@@ -54,6 +55,16 @@ const projects = [
     github: "https://github.com/Saif-DevX/Sidcup-family-Golf",
     demo: "https://zesty-sunburst-bf93e3.netlify.app/",
   },
+  {
+  title: "Wander✈️Wise Travel Booking",
+  description:
+    "A modern and fully responsive travel booking website built with React, Tailwind, and Framer Motion. Features animated UI, smooth routing, carousels, and a seamless user experience across devices.",
+  image: WanderWiseImg, 
+  tech: ["HTML", "React.js", "Tailwind CSS", "Framer Motion"],
+  github: "https://github.com/Saif-DevX/Wanderwise-PK",
+  demo: "https://wanderwise-pk.netlify.app/",
+}
+
 ];
 
 const Projects = () => {

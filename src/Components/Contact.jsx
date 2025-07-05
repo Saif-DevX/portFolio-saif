@@ -21,7 +21,7 @@ const Contact = () => {
 
   useEffect(() => {
     if (status) {
-      const timer = setTimeout(() => setStatus(""), 10000); // clear after 10 seconds
+      const timer = setTimeout(() => setStatus(""), 10000);
       return () => clearTimeout(timer);
     }
   }, [status]);
@@ -35,10 +35,10 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_24t6179", 
-        "template_o7j1ccu", 
+        "service_24t6179",
+        "template_o7j1ccu",
         formData,
-        "BIqV749Cp0afkxD7o" 
+        "BIqV749Cp0afkxD7o"
       )
       .then(
         (result) => {
@@ -55,17 +55,20 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-black text-white py-24 px-6">
+    <section
+      id="contact"
+      className="bg-black text-white py-20 px-4 sm:px-6 overflow-hidden"
+    >
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl sm:text-5xl font-bold text-center text-indigo-400 mb-12"
+        className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-indigo-400 mb-20"
       >
         Get In Touch
       </motion.h2>
 
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         {/* Contact Info */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -73,14 +76,18 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="space-y-6"
         >
-          <p className="text-gray-300">
-            I'd love to hear from you! Whether it's a project idea, collaboration, or just a chat — feel free to reach out.
+          <p className="text-gray-300 text-base sm:text-lg">
+            I'd love to hear from you! Whether it's a project idea,
+            collaboration, or just a chat — feel free to reach out.
           </p>
 
           <div className="space-y-4 text-sm text-indigo-300">
             <p className="flex items-center gap-3">
               <FaEnvelope className="text-lg text-indigo-500" />
-              <a href="mailto:developersaif336@gmail.com" className="hover:underline">
+              <a
+                href="mailto:developersaif336@gmail.com"
+                className="hover:underline break-all"
+              >
                 developersaif336@gmail.com
               </a>
             </p>
@@ -91,12 +98,13 @@ const Contact = () => {
           </div>
 
           {/* Socials */}
-          <div className="flex gap-6 mt-6 text-xl text-indigo-300">
+          <div className="flex gap-6 mt-6 text-xl text-indigo-300 flex-wrap">
             <a
               href="https://x.com/SaifDevX"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition cursor-pointer"
+              title="Twitter"
             >
               <FaTwitter />
             </a>
@@ -105,6 +113,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition cursor-pointer"
+              title="GitHub"
             >
               <FaGithub />
             </a>
@@ -113,6 +122,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition cursor-pointer"
+              title="LinkedIn"
             >
               <FaLinkedin />
             </a>
@@ -125,7 +135,7 @@ const Contact = () => {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6 bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10"
+          className="space-y-6 bg-white/5 backdrop-blur-md p-6 sm:p-8 rounded-xl border border-white/10"
         >
           <input
             type="text"
@@ -134,7 +144,7 @@ const Contact = () => {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full p-3 rounded bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 rounded bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm sm:text-base"
           />
           <input
             type="email"
@@ -143,7 +153,7 @@ const Contact = () => {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-3 rounded bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 rounded bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm sm:text-base"
           />
           <textarea
             name="message"
@@ -152,7 +162,7 @@ const Contact = () => {
             required
             value={formData.message}
             onChange={handleChange}
-            className="w-full p-3 rounded bg-white/10 text-white placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 rounded bg-white/10 text-white placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm sm:text-base"
           />
           <button
             type="submit"
@@ -171,3 +181,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

@@ -4,6 +4,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 @layer utilities {
   .animate-spin-slow {
     animation: spin 6s linear infinite;
