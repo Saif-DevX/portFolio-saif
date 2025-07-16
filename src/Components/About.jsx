@@ -5,7 +5,7 @@ import { FaCode, FaRocket, FaLightbulb } from "react-icons/fa";
 import AboutImage from "../assets/Hero.jpg";
 
 const About = () => {
-  motion.div
+  motion.div;
   return (
     <section
       id="about"
@@ -23,45 +23,45 @@ const About = () => {
         className="relative z-10 max-w-6xl w-full bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[30px] p-8 sm:p-12 md:p-16 shadow-xl"
       >
         {/* 🔥 Modern Animated Profile Image */}
-<motion.div
-  initial={{ opacity: 0, scale: 0.8 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  transition={{ delay: 0.2, duration: 0.8 }}
-  viewport={{ once: true }}
-  className="flex justify-center mb-8"
->
-  <motion.div
-    animate={{ y: [0, -8, 0] }}
-    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-    className="relative w-44 h-44 sm:w-52 sm:h-52"
-  >
-    {/* Halo Glow */}
-    <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-500 via-indigo-500 to-pink-500 blur-2xl opacity-20 animate-pulse" />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          viewport={{ once: true }}
+          className="flex justify-center mb-8"
+        >
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="relative w-44 h-44 sm:w-52 sm:h-52"
+          >
+            {/* Halo Glow */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-500 via-indigo-500 to-pink-500 blur-2xl opacity-20 animate-pulse" />
 
-    {/* Glassy Rotating Ring */}
-    <div className="absolute inset-0 rounded-full border-4 border-transparent animate-spin-slow"
-         style={{
-           borderTopColor: '#8b5cf6', // indigo-500
-           borderRightColor: '#a855f7', // purple-500
-           borderLeftColor: 'transparent',
-           borderBottomColor: 'transparent',
-         }}
-    />
+            {/* Glassy Rotating Ring */}
+            <div
+              className="absolute inset-0 rounded-full border-4 border-transparent animate-spin-slow"
+              style={{
+                borderTopColor: "#8b5cf6", // indigo-500
+                borderRightColor: "#a855f7", // purple-500
+                borderLeftColor: "transparent",
+                borderBottomColor: "transparent",
+              }}
+            />
 
-    {/* Profile Image Container */}
-    <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-indigo-500 bg-white/5 backdrop-blur-lg shadow-2xl">
-      <img
-        src={ AboutImage }
-        alt="Profile"
-        className="w-full h-full object-cover"
-      />
-    </div>
+            {/* Profile Image Container */}
+            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-indigo-500 bg-white/5 backdrop-blur-lg shadow-2xl">
+              <img
+                src={AboutImage}
+                alt="Profile"
+                className="w-full h-full object-cover"
+              />
+            </div>
 
-    {/* Subtle Light Reflection */}
-    <div className="absolute top-1 left-1 w-full h-full rounded-full bg-white opacity-5 blur-md pointer-events-none" />
-  </motion.div>
-</motion.div>
-
+            {/* Subtle Light Reflection */}
+            <div className="absolute top-1 left-1 w-full h-full rounded-full bg-white opacity-5 blur-md pointer-events-none" />
+          </motion.div>
+        </motion.div>
 
         {/* Heading */}
         <motion.h2
@@ -188,14 +188,23 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5 }}
-          className="mt-12 text-center"
+          className="mt-12 space-x-6 text-center"
         >
           <a
-            href="/public/Saif CV.pdf"
-            download="Saif CV.pdf"
+            href="/Saif_ur_Rehman_React.js_intern_CV.pdf"
+            download="Saif-ur-Rehman-React.Js_intern CV.pdf"
             className="inline-block px-6 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 transition duration-300 text-white font-semibold shadow-lg"
           >
             Download Resume
+          </a>
+
+          <a
+            href="/Saif_ur_Rehman_React.js_intern_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 transition duration-300 text-white font-semibold shadow-lg"
+          >
+            View Resume
           </a>
         </motion.div>
       </motion.div>
